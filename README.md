@@ -1,2 +1,2 @@
 # pokefinder
-An app that finds pokémon fitting arbitrary criteria
+An app that finds pokémon that fit arbitrary criteria
