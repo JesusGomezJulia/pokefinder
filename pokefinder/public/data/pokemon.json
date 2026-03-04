@@ -25,7 +25,8 @@
     "evos": ["Ivysaur"],
     "eggGroups": ["Monster", "Grass"],
     "tier": "Illegal",
-    "isNonstandard": "Past"
+    "isNonstandard": "Past",
+    "generation": "generation-i"
   },
   "ivysaur": {
     "num": 2,

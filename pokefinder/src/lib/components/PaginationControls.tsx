@@ -1,10 +1,11 @@
-import { Button, Stack, Typography } from "@mui/material";
+import { Button, Stack, Typography } from '@mui/material';
+
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   ChevronsLeftIcon,
   ChevronsRightIcon,
-} from "lucide-react";
+} from 'lucide-react';
 
 type PaginationProps = {
   currentPage: number;

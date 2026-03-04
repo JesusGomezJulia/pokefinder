@@ -1,8 +1,10 @@
-import type { Type } from "@/lib/types";
-import type { Setter } from "@/lib/types/generics";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import { TypeBadge } from "../PokeTypes";
-import { TYPES } from "../constants";
+import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+
+import type { Type } from '@/lib/types';
+import type { Setter } from '@/lib/types/generics';
+
+import { TYPES } from '../constants';
+import { TypeBadge } from '../PokeTypes';
 
 type TypeSelectorProps = {
   type: Type | null | undefined;
@@ -29,17 +31,17 @@ export function TypeSelector({ type, setType, label }: TypeSelectorProps) {
         ))}
       </Select>
     </FormControl>
-  )
+  );
 }
 
 function typeToString(type: Type | null | undefined) {
-  if (type === null) return "None";
-  if (type === undefined) return "Any";
+  if (type === null) return 'None';
+  if (type === undefined) return 'Any';
   return type;
 }
 
 function stringToType(str: string): Type | null | undefined {
-  if (str === "None") return null;
-  if (str === "Any") return undefined;
+  if (str === 'None') return null;
+  if (str === 'Any') return undefined;
   return str as Type;
 }

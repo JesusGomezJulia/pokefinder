@@ -1,26 +1,25 @@
-import React from "react";
-import type { Type } from "../../types";
-import type { Setter } from "../../types/generics";
+import type { Generation, TristateToggle, Type } from '@lib/types';
 
-type TypeFilterTarget = Type | null | undefined;
+import React from 'react';
 
-type TContext = {
-  type1: TypeFilterTarget;
-  setType1: Setter<TypeFilterTarget>;
-  type2: TypeFilterTarget;
-  setType2: Setter<TypeFilterTarget>;
-  excludedTypes: (Type | null)[];
-  setExcludedTypes: Setter<(Type | null)[]>;
-};
-export const Context = React.createContext<TContext | null>(null);
+import { GENERATIONS } from '../constants';
+
+import type { TypeFilterTarget } from './types';
+import { FilterContext } from './useFilters';
+
+const defaultGenFilters = Object.fromEntries(
+  GENERATIONS.map((g) => [g, undefined]),
+) as Record<Generation, TristateToggle>;
 
 export function FilterProvider({ children }: React.PropsWithChildren) {
   const [type1, setType1] = React.useState<TypeFilterTarget>(null);
   const [type2, setType2] = React.useState<TypeFilterTarget>(null);
   const [excludedTypes, setExcludedTypes] = React.useState<(Type | null)[]>([]);
+  const [generations, setGenerations] =
+    React.useState<Record<Generation, TristateToggle>>(defaultGenFilters);
 
   return (
-    <Context.Provider
+    <FilterContext.Provider
       value={{
         type1,
         setType1,
@@ -28,17 +27,11 @@ export function FilterProvider({ children }: React.PropsWithChildren) {
         setType2,
         excludedTypes,
         setExcludedTypes,
+        generations,
+        setGenerations,
       }}
     >
       {children}
-    </Context.Provider>
+    </FilterContext.Provider>
   );
-}
-
-export function useFilters() {
-  const context = React.useContext(Context);
-  if (!context) {
-    throw new Error("useFilters must be used within a FilterProvider");
-  }
-  return context;
 }

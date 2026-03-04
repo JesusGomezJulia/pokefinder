@@ -1,20 +1,15 @@
-import { fetchPokedex } from "@/lib/api";
-import type { Pokemon } from "@/lib/types";
-import { useQuery } from "@tanstack/react-query";
-import React, { useContext, type PropsWithChildren } from "react";
+import { useQuery } from '@tanstack/react-query';
 
-type TContext = {
-  pokedex: Pokemon[];
-  pokeData: Map<string, Pokemon>;
-};
-const Context = React.createContext<TContext>({
-  pokedex: [],
-  pokeData: new Map(),
-});
+import React, { type PropsWithChildren } from 'react';
+
+import { fetchPokedex } from '@/lib/api';
+import type { Pokemon } from '@/lib/types';
+
+import { PokedexContext } from './usePokedex';
 
 export function PokedexProvider({ children }: PropsWithChildren) {
   const { data: pokedex } = useQuery({
-    queryKey: ["pokedex"],
+    queryKey: ['pokedex'],
     queryFn: fetchPokedex,
   });
   const enrichedPokedex = React.useMemo(
@@ -27,14 +22,10 @@ export function PokedexProvider({ children }: PropsWithChildren) {
   );
 
   return (
-    <Context.Provider value={{ pokedex: enrichedPokedex, pokeData }}>
+    <PokedexContext.Provider value={{ pokedex: enrichedPokedex, pokeData }}>
       {children}
-    </Context.Provider>
+    </PokedexContext.Provider>
   );
-}
-
-export function usePokedex() {
-  return useContext(Context);
 }
 
 function enrichPokemon(p: Pokemon): Pokemon {

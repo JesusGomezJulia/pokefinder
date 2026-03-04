@@ -1,7 +1,8 @@
-import { Stack } from "@mui/material";
-import { DisabledTypesControl } from "./DisabledTypeControl";
-import { useFilters } from "./FilterProvider";
-import { TypeSelector } from "./TypeSelector";
+import { Stack } from '@mui/material';
+
+import { DisabledTypesControl } from './DisabledTypeControl';
+import { TypeSelector } from './TypeSelector';
+import { useFilters } from './useFilters';
 
 export function FilterBar() {
   return <TypesSection />;
@@ -17,5 +18,5 @@ function TypesSection() {
       </Stack>
       <DisabledTypesControl />
     </Stack>
-  )
+  );
 }

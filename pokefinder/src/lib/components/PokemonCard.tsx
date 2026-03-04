@@ -1,6 +1,8 @@
-import { Box, Stack, Typography } from "@mui/material";
-import type { Pokemon } from "../types";
-import { PokeTypes } from "./PokeTypes";
+import { Box, Stack, Typography } from '@mui/material';
+
+import type { Pokemon } from '@/lib/types';
+
+import { PokeTypes } from './PokeTypes';
 
 const POKEMON_IMG_SIZE = 288; // define this somewhere in your library, maybe even make it a prop for the card?
 
@@ -22,14 +24,14 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
         type="image/jpeg"
         aria-label={pokemon.name}
         height={POKEMON_IMG_SIZE}
-        sx={{ objectFit: "contain", imageRendering: "pixelated" }}
+        sx={{ objectFit: 'contain', imageRendering: 'pixelated' }}
       >
         <Box
           component="img"
           src={pokemon.thumbnailUrl}
           alt={pokemon.name}
           height={POKEMON_IMG_SIZE}
-          sx={{ objectFit: "contain" }}
+          sx={{ objectFit: 'contain' }}
         />
       </Box>
       <Typography variant="h4" textAlign="center">

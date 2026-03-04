@@ -1,7 +1,9 @@
-import { Box, Stack, Typography } from "@mui/material";
-import type { Type } from "../types";
-import { TYPE_COLORS, TYPE_CONTRAST } from "./constants";
-import { getBrightness } from "../theme/color";
+import { Box, Stack, Typography } from '@mui/material';
+
+import { getBrightness } from '@/lib/theme/color';
+import type { Type } from '@/lib/types';
+
+import { TYPE_COLORS, TYPE_CONTRAST } from './constants';
 
 type PokeTypesProps = {
   types: Type[];
@@ -35,7 +37,7 @@ export function TypeBadge({ pokeType, iconOnly }: TypeBadgeProps) {
       color={contrastColor}
       borderRadius={3}
     >
-      <TypeIcon pokeType={pokeType} />{" "}
+      <TypeIcon pokeType={pokeType} />{' '}
       {/* Also define this somewhere, maybe pull from that same github's sprites? */}
       {!iconOnly && ( // yay conditional rendering!
         <Typography variant="body1">{pokeType}</Typography>
@@ -63,7 +65,7 @@ export function TypeIcon({ pokeType, iconSize = 18, invert }: TypeIconProps) {
       sx={{
         width: iconSize,
         height: iconSize,
-        filter: shouldInvert ? "invert(1)" : "none",
+        filter: shouldInvert ? 'invert(1)' : 'none',
       }}
     >
       <Box

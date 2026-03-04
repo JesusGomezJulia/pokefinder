@@ -1,10 +1,11 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { PokedexProvider } from "./providers/PokedexProvider";
-import { createTheme, Stack, ThemeProvider } from "@mui/material";
-import { themeOptions } from "./lib/theme/dark";
-import { FilterBar } from "./lib/components/filter-bar/FilterBar";
-import { FilterProvider } from "./lib/components/filter-bar/FilterProvider";
-import { FilteredPokemonList } from "./lib/components/FilteredPokemonList";
+import { createTheme, Stack, ThemeProvider } from '@mui/material';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+import { FilterBar } from './lib/components/filter-bar/FilterBar';
+import { FilterProvider } from './lib/components/filter-bar/FilterProvider';
+import { FilteredPokemonList } from './lib/components/FilteredPokemonList';
+import { themeOptions } from './lib/theme/dark';
+import { PokedexProvider } from './providers/PokedexProvider';
 
 const theme = createTheme(themeOptions);
 const queryClient = new QueryClient();

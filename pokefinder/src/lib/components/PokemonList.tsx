@@ -1,8 +1,10 @@
-import type { Pokemon } from "../types";
-import { Grid, Stack, useTheme } from "@mui/material";
-import { PokemonCard } from "./PokemonCard";
-import { usePagination } from "../hooks/usePagination";
-import { PaginationControls } from "./PaginationControls";
+import { Grid, Stack, useTheme } from '@mui/material';
+
+import { usePagination } from '@/lib/hooks/usePagination';
+import type { Pokemon } from '@/lib/types';
+
+import { PaginationControls } from './PaginationControls';
+import { PokemonCard } from './PokemonCard';
 
 type PokemonListProps = {
   pokemons: Pokemon[];

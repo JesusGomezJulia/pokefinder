@@ -1,9 +1,13 @@
-import { Button, Grid } from "@mui/material";
-import { useFilters } from "./FilterProvider";
-import { Type } from "@/lib/types";
-import { TypeIcon } from "../PokeTypes";
-import { XIcon } from "lucide-react";
-import { TYPES } from "../constants";
+import { Button, Grid } from '@mui/material';
+
+import { XIcon } from 'lucide-react';
+
+import { Type } from '@/lib/types';
+
+import { TYPES } from '../constants';
+import { TypeIcon } from '../PokeTypes';
+
+import { useFilters } from './useFilters';
 
 const candidates: (Type | null)[] = [...TYPES, null];
 export function DisabledTypesControl() {
@@ -11,11 +15,11 @@ export function DisabledTypesControl() {
   return (
     <Grid container spacing={1} alignSelf="flex-start">
       {candidates.map((type) => (
-        <Grid size={2} key={type?.toString() ?? "null"}>
+        <Grid size={2} key={type?.toString() ?? 'null'}>
           <Button
             variant="contained"
-            color={excludedTypes.includes(type) ? "error" : "info"}
-            sx={{ p: 0.5, minWidth: 0, width: "100%" }}
+            color={excludedTypes.includes(type) ? 'error' : 'info'}
+            sx={{ p: 0.5, minWidth: 0, width: '100%' }}
             onClick={() => {
               setExcludedTypes((excludedTypes) => {
                 if (excludedTypes.includes(type)) {
