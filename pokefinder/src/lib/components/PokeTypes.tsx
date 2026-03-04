@@ -1,6 +1,7 @@
-import { Box, Stack, type StackProps, Typography } from '@mui/material';
+import { Stack, type StackProps, Typography } from '@mui/material';
 
-import { getBrightness } from '@/lib/theme/color';
+import { CircleQuestionMarkIcon, type LucideProps } from 'lucide-react';
+
 import type { Type } from '@/lib/types';
 
 import { TYPE_DATA } from './constants';
@@ -43,35 +44,14 @@ export function TypeBadge({ pokeType, iconOnly, ...props }: TypeBadgeProps) {
   );
 }
 
-type TypeIconProps = {
+type TypeIconProps = LucideProps & {
   pokeType: Type;
-  iconSize?: number;
-  invert?: boolean;
 };
-export function TypeIcon({ pokeType, iconSize = 18, invert }: TypeIconProps) {
-  const iconUrl = `https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${pokeType.toLowerCase()}.svg`;
-  const contrastColor = TYPE_DATA[pokeType].colors.contrast;
-  const contrastBrightness = getBrightness(contrastColor);
-  const shouldInvert = invert !== undefined ? invert : contrastBrightness < 0.5;
-  return (
-    <Box
-      component="object"
-      data={iconUrl}
-      type="image/svg+xml"
-      aria-label={`${pokeType} type icon`}
-      sx={{
-        width: iconSize,
-        height: iconSize,
-        filter: shouldInvert ? 'invert(1)' : 'none',
-      }}
-    >
-      <Box
-        component="img"
-        src={iconUrl}
-        alt={`${pokeType} type icon`}
-        width={iconSize}
-        height={iconSize}
-      />
-    </Box>
-  );
+export function TypeIcon({ pokeType, size = 20, ...props }: TypeIconProps) {
+  const typeData = TYPE_DATA[pokeType];
+
+  if (!typeData) return <CircleQuestionMarkIcon size={size} {...props} />;
+  const { Icon } = typeData;
+
+  return <Icon size={size} {...props} />;
 }
