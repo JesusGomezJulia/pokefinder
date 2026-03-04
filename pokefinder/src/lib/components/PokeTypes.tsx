@@ -1,9 +1,9 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack, type StackProps, Typography } from '@mui/material';
 
 import { getBrightness } from '@/lib/theme/color';
 import type { Type } from '@/lib/types';
 
-import { TYPE_COLORS, TYPE_CONTRAST } from './constants';
+import { TYPE_DATA } from './constants';
 
 type PokeTypesProps = {
   types: Type[];
@@ -19,13 +19,12 @@ export function PokeTypes({ types, iconOnly }: PokeTypesProps) {
   );
 }
 
-type TypeBadgeProps = {
-  pokeType: Type; // 'type' is reserved
+type TypeBadgeProps = StackProps & {
+  pokeType: Type;
   iconOnly?: boolean;
 };
-export function TypeBadge({ pokeType, iconOnly }: TypeBadgeProps) {
-  const typeColor = TYPE_COLORS[pokeType]; // define this object somewhere in your library
-  const contrastColor = TYPE_CONTRAST[pokeType];
+export function TypeBadge({ pokeType, iconOnly, ...props }: TypeBadgeProps) {
+  const { colors } = TYPE_DATA[pokeType];
 
   return (
     <Stack
@@ -33,15 +32,13 @@ export function TypeBadge({ pokeType, iconOnly }: TypeBadgeProps) {
       alignItems="center"
       gap={1}
       p={1}
-      bgcolor={typeColor}
-      color={contrastColor}
+      bgcolor={colors.main}
+      color={colors.contrast}
       borderRadius={3}
+      {...props}
     >
       <TypeIcon pokeType={pokeType} />{' '}
-      {/* Also define this somewhere, maybe pull from that same github's sprites? */}
-      {!iconOnly && ( // yay conditional rendering!
-        <Typography variant="body1">{pokeType}</Typography>
-      )}
+      {!iconOnly && <Typography variant="body1">{pokeType}</Typography>}
     </Stack>
   );
 }
@@ -53,7 +50,7 @@ type TypeIconProps = {
 };
 export function TypeIcon({ pokeType, iconSize = 18, invert }: TypeIconProps) {
   const iconUrl = `https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${pokeType.toLowerCase()}.svg`;
-  const contrastColor = TYPE_CONTRAST[pokeType];
+  const contrastColor = TYPE_DATA[pokeType].colors.contrast;
   const contrastBrightness = getBrightness(contrastColor);
   const shouldInvert = invert !== undefined ? invert : contrastBrightness < 0.5;
   return (

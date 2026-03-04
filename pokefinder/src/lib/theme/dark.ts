@@ -1,6 +1,9 @@
 import type { ThemeOptions } from '@mui/material';
 
+import { buildThemeComponents } from './components';
+
 export const themeOptions: ThemeOptions = {
+  components: buildThemeComponents(),
   palette: {
     mode: 'dark',
     primary: {

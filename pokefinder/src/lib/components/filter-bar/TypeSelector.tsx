@@ -1,4 +1,10 @@
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Typography,
+} from '@mui/material';
 
 import type { Type } from '@/lib/types';
 import type { Setter } from '@/lib/types/generics';
@@ -22,11 +28,15 @@ export function TypeSelector({ type, setType, label }: TypeSelectorProps) {
         label={label}
         onChange={(e) => setType(stringToType(e.target.value as string))}
       >
-        <MenuItem value="None">None</MenuItem>
-        <MenuItem value="Any">Any</MenuItem>
+        <MenuItem value="None">
+          <Typography sx={{ py: 0.25 }}>None</Typography>
+        </MenuItem>
+        <MenuItem value="Any">
+          <Typography sx={{ py: 0.25 }}>Any</Typography>
+        </MenuItem>
         {TYPES.map((t) => (
           <MenuItem key={t} value={t}>
-            <TypeBadge pokeType={t} />
+            <TypeBadge pokeType={t} py={0.25} />
           </MenuItem>
         ))}
       </Select>
