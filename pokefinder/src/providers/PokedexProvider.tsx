@@ -6,19 +6,40 @@ import React, { useContext, type PropsWithChildren } from "react";
 type TContext = {
   pokedex: Pokemon[];
   pokeData: Map<string, Pokemon>;
-}
+};
 const Context = React.createContext<TContext>({
   pokedex: [],
   pokeData: new Map(),
 });
 
 export function PokedexProvider({ children }: PropsWithChildren) {
-  const { data: pokedex } = useQuery({ queryKey: ['pokedex'], queryFn: fetchPokedex });
-  const pokeData = React.useMemo(() => new Map((pokedex ?? []).map((p) => [p.id, p])), [pokedex]);
+  const { data: pokedex } = useQuery({
+    queryKey: ["pokedex"],
+    queryFn: fetchPokedex,
+  });
+  const enrichedPokedex = React.useMemo(
+    () => pokedex?.map(enrichPokemon) ?? [],
+    [pokedex],
+  );
+  const pokeData = React.useMemo(
+    () => new Map((enrichedPokedex ?? []).map((p) => [p.id, p])),
+    [enrichedPokedex],
+  );
 
-  return <Context.Provider value={{ pokedex: pokedex ?? [], pokeData }}>{children}</Context.Provider>;
+  return (
+    <Context.Provider value={{ pokedex: enrichedPokedex, pokeData }}>
+      {children}
+    </Context.Provider>
+  );
 }
 
 export function usePokedex() {
   return useContext(Context);
+}
+
+function enrichPokemon(p: Pokemon): Pokemon {
+  return {
+    thumbnailUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.num}.png`,
+    ...p,
+  };
 }

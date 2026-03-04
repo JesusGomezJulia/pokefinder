@@ -1,0 +1,43 @@
+import type { Type } from "../types";
+
+export const TYPE_COLORS: Record<Type, string> = {
+  Bug: "#A8B820",
+  Dark: "#705848",
+  Dragon: "#7038F8",
+  Electric: "#F8D030",
+  Fairy: "#EE99AC",
+  Fighting: "#C03028",
+  Fire: "#F08030",
+  Flying: "#A890F0",
+  Ghost: "#705898",
+  Grass: "#78C850",
+  Ground: "#E0C068",
+  Ice: "#98D8D8",
+  Normal: "#A8A878",
+  Poison: "#A040A0",
+  Psychic: "#F85888",
+  Rock: "#B8A038",
+  Steel: "#B8B8D0",
+  Water: "#6890F0",
+};
+export const TYPE_CONTRAST: Record<Type, string> = {
+  Bug: "#000000",
+  Dark: "#FFFFFF",
+  Dragon: "#FFFFFF",
+  Electric: "#000000",
+  Fairy: "#000000",
+  Fighting: "#FFFFFF",
+  Fire: "#FFFFFF",
+  Flying: "#000000",
+  Ghost: "#FFFFFF",
+  Grass: "#FFFFFF",
+  Ground: "#000000",
+  Ice: "#000000",
+  Normal: "#000000",
+  Poison: "#FFFFFF",
+  Psychic: "#FFFFFF",
+  Rock: "#FFFFFF",
+  Steel: "#000000",
+  Water: "#FFFFFF",
+};
+export const TYPES: Type[] = Object.keys(TYPE_COLORS) as Type[];
