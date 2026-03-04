@@ -1,4 +1,4 @@
-import { Grid, Stack, useTheme } from '@mui/material';
+import { Grid, Stack } from '@mui/material';
 
 import { usePagination } from '@/lib/hooks/usePagination';
 import type { Pokemon } from '@/lib/types';
@@ -11,8 +11,6 @@ type PokemonListProps = {
   pageSize?: number;
 };
 export function PokemonList({ pokemons, pageSize = 24 }: PokemonListProps) {
-  const theme = useTheme();
-  console.log(theme);
   const {
     page,
     setPage,

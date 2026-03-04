@@ -5,6 +5,7 @@ import { XIcon } from 'lucide-react';
 import { Type } from '@/lib/types';
 
 import { TYPES } from '../constants';
+import { MultiTogglePanel } from '../generic/MultiTogglePanel';
 import { TypeIcon } from '../PokeTypes';
 
 import { useFilters } from './useFilters';
@@ -13,31 +14,30 @@ const candidates: (Type | null)[] = [...TYPES, null];
 export function DisabledTypesControl() {
   const { excludedTypes, setExcludedTypes } = useFilters();
   return (
-    <Grid container spacing={1} alignSelf="flex-start">
-      {candidates.map((type) => (
-        <Grid size={2} key={type?.toString() ?? 'null'}>
+    <MultiTogglePanel
+      candidates={candidates}
+      selected={excludedTypes}
+      setSelected={setExcludedTypes}
+      soloBehavior="exclude"
+      container
+      spacing={1}
+      justifyContent="center"
+      renderItem={(type, { isSelected, isSolo, onClick }) => (
+        <Grid size={2} key={type ?? 'null'}>
           <Button
             variant="contained"
-            color={excludedTypes.includes(type) ? 'error' : 'info'}
-            sx={{ p: 0.5, minWidth: 0, width: '100%' }}
-            onClick={() => {
-              setExcludedTypes((excludedTypes) => {
-                if (excludedTypes.includes(type)) {
-                  return excludedTypes.filter((t) => t !== type);
-                } else {
-                  return [...excludedTypes, type];
-                }
-              });
-            }}
+            color={isSelected ? 'error' : isSolo ? 'success' : 'info'}
+            fullWidth
+            onClick={onClick}
           >
             {type ? (
-              <TypeIcon iconSize={16} pokeType={type} invert={false} />
+              <TypeIcon pokeType={type} size={16} color="white" />
             ) : (
               <XIcon size={16} color="white" />
             )}
           </Button>
         </Grid>
-      ))}
-    </Grid>
+      )}
+    />
   );
 }

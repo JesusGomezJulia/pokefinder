@@ -1,8 +1,8 @@
 import React from 'react';
 
-import type { Setter, Type } from '@/lib/types';
+import type { Generation, Setter, Type } from '@/lib/types';
 
-import type { GenerationFilters, TypeFilterTarget } from './types';
+import type { TypeFilterTarget } from './types';
 
 type TFilterContext = {
   type1: TypeFilterTarget;
@@ -11,8 +11,8 @@ type TFilterContext = {
   setType2: Setter<TypeFilterTarget>;
   excludedTypes: (Type | null)[];
   setExcludedTypes: Setter<(Type | null)[]>;
-  generations: GenerationFilters;
-  setGenerations: Setter<GenerationFilters>;
+  excludedGens: Generation[];
+  setExcludedGens: Setter<Generation[]>;
 };
 export const FilterContext = React.createContext<TFilterContext | null>(null);
 

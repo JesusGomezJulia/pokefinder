@@ -1,5 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material';
 
+import React from 'react';
+
 import type { Pokemon } from '@/lib/types';
 
 import { GenBadge } from './GenBadge';
@@ -10,7 +12,7 @@ const POKEMON_IMG_SIZE = 288; // define this somewhere in your library, maybe ev
 type PokemonCardProps = {
   pokemon: Pokemon;
 };
-export function PokemonCard({ pokemon }: PokemonCardProps) {
+function PokemonCardInternal({ pokemon }: PokemonCardProps) {
   return (
     <Stack
       flexGrow={1}
@@ -56,3 +58,5 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
     </Stack>
   );
 }
+
+export const PokemonCard = React.memo(PokemonCardInternal);
