@@ -4,7 +4,7 @@ export function getBrightness(color: string) {
 }
 
 function getComponents(color: string) {
-  if (color[0] === "#") color = color.substring(1);
+  if (color[0] === '#') color = color.substring(1);
   switch (color.length) {
     case 3:
       return [

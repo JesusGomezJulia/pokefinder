@@ -1,7 +1,10 @@
-import { Box, Stack, Typography } from "@mui/material";
-import type { Type } from "../types";
-import { TYPE_COLORS, TYPE_CONTRAST } from "./constants";
-import { getBrightness } from "../theme/color";
+import { Stack, type StackProps, Typography } from '@mui/material';
+
+import { CircleQuestionMarkIcon, type LucideProps } from 'lucide-react';
+
+import type { Type } from '@/lib/types';
+
+import { TYPE_DATA } from './constants';
 
 type PokeTypesProps = {
   types: Type[];
@@ -17,13 +20,12 @@ export function PokeTypes({ types, iconOnly }: PokeTypesProps) {
   );
 }
 
-type TypeBadgeProps = {
-  pokeType: Type; // 'type' is reserved
+type TypeBadgeProps = StackProps & {
+  pokeType: Type;
   iconOnly?: boolean;
 };
-export function TypeBadge({ pokeType, iconOnly }: TypeBadgeProps) {
-  const typeColor = TYPE_COLORS[pokeType]; // define this object somewhere in your library
-  const contrastColor = TYPE_CONTRAST[pokeType];
+export function TypeBadge({ pokeType, iconOnly, ...props }: TypeBadgeProps) {
+  const { colors } = TYPE_DATA[pokeType];
 
   return (
     <Stack
@@ -31,48 +33,25 @@ export function TypeBadge({ pokeType, iconOnly }: TypeBadgeProps) {
       alignItems="center"
       gap={1}
       p={1}
-      bgcolor={typeColor}
-      color={contrastColor}
+      bgcolor={colors.main}
+      color={colors.contrast}
       borderRadius={3}
+      {...props}
     >
-      <TypeIcon pokeType={pokeType} />{" "}
-      {/* Also define this somewhere, maybe pull from that same github's sprites? */}
-      {!iconOnly && ( // yay conditional rendering!
-        <Typography variant="body1">{pokeType}</Typography>
-      )}
+      <TypeIcon pokeType={pokeType} />{' '}
+      {!iconOnly && <Typography variant="body1">{pokeType}</Typography>}
     </Stack>
   );
 }
 
-type TypeIconProps = {
+type TypeIconProps = LucideProps & {
   pokeType: Type;
-  iconSize?: number;
-  invert?: boolean;
 };
-export function TypeIcon({ pokeType, iconSize = 18, invert }: TypeIconProps) {
-  const iconUrl = `https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${pokeType.toLowerCase()}.svg`;
-  const contrastColor = TYPE_CONTRAST[pokeType];
-  const contrastBrightness = getBrightness(contrastColor);
-  const shouldInvert = invert !== undefined ? invert : contrastBrightness < 0.5;
-  return (
-    <Box
-      component="object"
-      data={iconUrl}
-      type="image/svg+xml"
-      aria-label={`${pokeType} type icon`}
-      sx={{
-        width: iconSize,
-        height: iconSize,
-        filter: shouldInvert ? "invert(1)" : "none",
-      }}
-    >
-      <Box
-        component="img"
-        src={iconUrl}
-        alt={`${pokeType} type icon`}
-        width={iconSize}
-        height={iconSize}
-      />
-    </Box>
-  );
+export function TypeIcon({ pokeType, size = 20, ...props }: TypeIconProps) {
+  const typeData = TYPE_DATA[pokeType];
+
+  if (!typeData) return <CircleQuestionMarkIcon size={size} {...props} />;
+  const { Icon } = typeData;
+
+  return <Icon size={size} {...props} />;
 }

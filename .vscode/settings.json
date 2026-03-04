@@ -1,0 +1,12 @@
+{
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+
+  // Optional but recommended:
+  "prettier.enable": false,
+
+  "files.eol": "\n"
+}

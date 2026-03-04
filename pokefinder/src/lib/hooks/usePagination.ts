@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export function usePagination<T>(items: T[], itemsPerPage: number) {
   const [page, setPage] = React.useState(0);

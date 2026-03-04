@@ -1,13 +1,18 @@
-import { Box, Stack, Typography } from "@mui/material";
-import type { Pokemon } from "../types";
-import { PokeTypes } from "./PokeTypes";
+import { Box, Stack, Typography } from '@mui/material';
+
+import React from 'react';
+
+import type { Pokemon } from '@/lib/types';
+
+import { GenBadge } from './GenBadge';
+import { PokeTypes } from './PokeTypes';
 
 const POKEMON_IMG_SIZE = 288; // define this somewhere in your library, maybe even make it a prop for the card?
 
 type PokemonCardProps = {
   pokemon: Pokemon;
 };
-export function PokemonCard({ pokemon }: PokemonCardProps) {
+function PokemonCardInternal({ pokemon }: PokemonCardProps) {
   return (
     <Stack
       flexGrow={1}
@@ -15,6 +20,7 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
       borderRadius={2}
       bgcolor="background.paper"
       color="text.primary"
+      position="relative"
     >
       <Box
         component="object"
@@ -22,14 +28,14 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
         type="image/jpeg"
         aria-label={pokemon.name}
         height={POKEMON_IMG_SIZE}
-        sx={{ objectFit: "contain", imageRendering: "pixelated" }}
+        sx={{ objectFit: 'contain', imageRendering: 'pixelated' }}
       >
         <Box
           component="img"
           src={pokemon.thumbnailUrl}
           alt={pokemon.name}
           height={POKEMON_IMG_SIZE}
-          sx={{ objectFit: "contain" }}
+          sx={{ objectFit: 'contain' }}
         />
       </Box>
       <Typography variant="h4" textAlign="center">
@@ -37,6 +43,20 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
       </Typography>
       <Box flexGrow={1} />
       <PokeTypes types={pokemon.types} />
+      <Stack
+        direction="row"
+        position="absolute"
+        top={0}
+        left={0}
+        right={0}
+        p={2}
+      >
+        <Typography variant="h6"># {pokemon.num}</Typography>
+        <Box flexGrow={1} />
+        {pokemon.generation && <GenBadge generation={pokemon.generation} />}
+      </Stack>
     </Stack>
   );
 }
+
+export const PokemonCard = React.memo(PokemonCardInternal);

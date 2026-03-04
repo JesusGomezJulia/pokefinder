@@ -1,26 +1,18 @@
-import React from "react";
-import type { Type } from "../../types";
-import type { Setter } from "../../types/generics";
+import React from 'react';
 
-type TypeFilterTarget = Type | null | undefined;
+import type { Generation, Type } from '@/lib/types';
 
-type TContext = {
-  type1: TypeFilterTarget;
-  setType1: Setter<TypeFilterTarget>;
-  type2: TypeFilterTarget;
-  setType2: Setter<TypeFilterTarget>;
-  excludedTypes: (Type | null)[];
-  setExcludedTypes: Setter<(Type | null)[]>;
-};
-export const Context = React.createContext<TContext | null>(null);
+import type { TypeFilterTarget } from './types';
+import { FilterContext } from './useFilters';
 
 export function FilterProvider({ children }: React.PropsWithChildren) {
-  const [type1, setType1] = React.useState<TypeFilterTarget>(null);
-  const [type2, setType2] = React.useState<TypeFilterTarget>(null);
+  const [type1, setType1] = React.useState<TypeFilterTarget>(undefined);
+  const [type2, setType2] = React.useState<TypeFilterTarget>(undefined);
   const [excludedTypes, setExcludedTypes] = React.useState<(Type | null)[]>([]);
+  const [excludedGens, setExcludedGens] = React.useState<Generation[]>([]);
 
   return (
-    <Context.Provider
+    <FilterContext.Provider
       value={{
         type1,
         setType1,
@@ -28,17 +20,11 @@ export function FilterProvider({ children }: React.PropsWithChildren) {
         setType2,
         excludedTypes,
         setExcludedTypes,
+        excludedGens,
+        setExcludedGens,
       }}
     >
       {children}
-    </Context.Provider>
+    </FilterContext.Provider>
   );
-}
-
-export function useFilters() {
-  const context = React.useContext(Context);
-  if (!context) {
-    throw new Error("useFilters must be used within a FilterProvider");
-  }
-  return context;
 }
