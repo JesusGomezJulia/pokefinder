@@ -1,0 +1,58 @@
+query SpeciesQuery {
+  pokemonspecies {
+    is_mythical
+    is_legendary
+    is_baby
+    id
+    name
+    pokemoncolor {
+      id
+      name
+    }
+    pokemonhabitat {
+      id
+      name
+    }
+    pokemonshape {
+      name
+      id
+    }
+    pokemons {
+      height
+      id
+      is_default
+      name
+      order
+      pokemonabilities {
+        ability_id
+        is_hidden
+        id
+        slot
+      }
+      pokemonforms {
+        name
+        order
+        id
+        form_name
+        form_order
+        is_battle_only
+        is_default
+        is_mega
+        pokemonformsprites {
+          sprites
+          id
+        }
+      }
+    }
+    gender_rate
+    evolves_from_species_id
+    generation {
+      id
+      name
+      types {
+        name
+        id
+      }
+    }
+  }
+}

@@ -50,8 +50,8 @@ export type Pokemon = {
   types: Type[];
   genderRatio?: GenderRatio;
   gender?: Gender;
-  stats: Stats;
-  abilities?: Record<'H' | '0' | '1' | '2', string>;
+  baseStats: Stats;
+  abilities?: Record<'H' | 'S' | '0' | '1' | '2', string>;
   heightm?: number;
   weightkg?: number;
   color?: string;
