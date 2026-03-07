@@ -19,13 +19,15 @@ export function GenBadge({
   typographyVariant = 'h5',
   ...props
 }: GenBadgeProps) {
+  const { label, color } = GENERATION_DATA[generation];
+
   return (
     <Box
       {...mergeSlotProps(props, {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        bgcolor: 'primary.main',
+        bgcolor: color,
         px: 0.25,
         boxSizing: 'border-box',
         minWidth: 48,
@@ -34,7 +36,7 @@ export function GenBadge({
       })}
     >
       <Typography alignSelf="center" variant={typographyVariant}>
-        {GENERATION_DATA[generation].label}
+        {label}
       </Typography>
     </Box>
   );

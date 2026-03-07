@@ -1,4 +1,4 @@
-import { Button, Grid, Stack } from '@mui/material';
+import { Button, darken, Grid, Stack } from '@mui/material';
 
 import { GENERATION_DATA, GENERATIONS } from '../constants';
 import { MultiTogglePanel } from '../generic/MultiTogglePanel';
@@ -17,18 +17,30 @@ export function GenFilterControl() {
         soloBehavior="exclude"
         columns={5}
         spacing={1}
-        renderItem={(gen, { isSelected, isSolo, onClick }) => (
-          <Grid size={1} key={gen}>
-            <Button
-              key={gen}
-              color={isSelected ? 'error' : isSolo ? 'success' : 'info'}
-              onClick={onClick}
-              fullWidth
-            >
-              {GENERATION_DATA[gen].label}
-            </Button>
-          </Grid>
-        )}
+        renderItem={(gen, { isSelected, onClick }) => {
+          const { label, color } = GENERATION_DATA[gen];
+
+          return (
+            <Grid size={1} key={gen}>
+              <Button
+                key={gen}
+                sx={{
+                  color: 'text.primary',
+                  bgcolor: color,
+                  opacity: isSelected ? 0.25 : 1,
+                  minWidth: 0,
+                  '&:hover': {
+                    bgcolor: darken(color, 0.3),
+                  },
+                }}
+                onClick={onClick}
+                fullWidth
+              >
+                {label}
+              </Button>
+            </Grid>
+          );
+        }}
       />
     </Stack>
   );

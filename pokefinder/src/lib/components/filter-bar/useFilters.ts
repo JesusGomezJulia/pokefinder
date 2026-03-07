@@ -9,10 +9,14 @@ type TFilterContext = {
   setType1: Setter<TypeFilterTarget>;
   type2: TypeFilterTarget;
   setType2: Setter<TypeFilterTarget>;
+  ignoreTypeOrder: boolean;
+  setIgnoreTypeOrder: Setter<boolean>;
   excludedTypes: (Type | null)[];
   setExcludedTypes: Setter<(Type | null)[]>;
   excludedGens: Generation[];
   setExcludedGens: Setter<Generation[]>;
+  name: string;
+  setName: Setter<string>;
 };
 export const FilterContext = React.createContext<TFilterContext | null>(null);
 

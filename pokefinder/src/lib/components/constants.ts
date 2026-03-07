@@ -127,17 +127,18 @@ export const TYPES: Type[] = Object.keys(TYPE_DATA) as Type[];
 
 export type GenerationData = {
   label: string;
+  color: string;
 };
 export const GENERATION_DATA: Record<Generation, GenerationData> = {
-  [Generation.Gen1]: { label: 'I' },
-  [Generation.Gen2]: { label: 'II' },
-  [Generation.Gen3]: { label: 'III' },
-  [Generation.Gen4]: { label: 'IV' },
-  [Generation.Gen5]: { label: 'V' },
-  [Generation.Gen6]: { label: 'VI' },
-  [Generation.Gen7]: { label: 'VII' },
-  [Generation.Gen8]: { label: 'VIII' },
-  [Generation.Gen9]: { label: 'IX' },
+  [Generation.Gen1]: { label: 'I', color: '#0c93c4' },
+  [Generation.Gen2]: { label: 'II', color: '#1758c1' },
+  [Generation.Gen3]: { label: 'III', color: '#0826bd' },
+  [Generation.Gen4]: { label: 'IV', color: '#5105cb' },
+  [Generation.Gen5]: { label: 'V', color: '#7309cf' },
+  [Generation.Gen6]: { label: 'VI', color: '#9b0ad5' },
+  [Generation.Gen7]: { label: 'VII', color: '#bc0fcc' },
+  [Generation.Gen8]: { label: 'VIII', color: '#c9116a' },
+  [Generation.Gen9]: { label: 'IX', color: '#c71242' },
 };
 export const GENERATIONS: Generation[] = Object.keys(
   GENERATION_DATA,

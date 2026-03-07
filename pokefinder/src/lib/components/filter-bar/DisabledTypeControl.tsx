@@ -22,6 +22,7 @@ export function DisabledTypesControl() {
       container
       spacing={1}
       justifyContent="center"
+      columns={9}
       renderItem={(type, { isSelected, isSolo, onClick }) => {
         const { colors } = (type ? TYPE_DATA[type] : null) ?? {
           colors: { main: '#000000', contrast: '#ffffff' },
@@ -29,7 +30,7 @@ export function DisabledTypesControl() {
 
         return (
           <Grid
-            size={2}
+            size={1}
             key={type ?? 'null'}
             display="flex"
             justifyContent="center"
