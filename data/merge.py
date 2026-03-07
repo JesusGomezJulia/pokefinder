@@ -3,12 +3,12 @@ import json
 from tqdm import tqdm
 
 from transform import COLOR_MAP, HABITAT_MAP
-from contracts import ExtraPokemon, Pokemon, Species
+from contracts import Pokemon, PokemonLegacy, Species
 
 def postprocess(input_file, extra_file, output_file):
   with open(input_file, 'r') as f:
     data = json.load(f)
-    pokedex = {key: Pokemon.model_validate(value) for key, value in data.items()}
+    pokedex = {key: PokemonLegacy.model_validate(value) for key, value in data.items()}
 
   with open(extra_file, 'r') as f:
     extra_data = json.load(f)["data"]["species"]
@@ -79,7 +79,7 @@ def normalize_name(name: str):
   return name.lower().replace(" ", "-").replace(".", "").replace("'", "").replace("%", "").replace(":", "").replace("-totem", "")
 
 STANDARD_SUFFIXES= ["", "-male", "emale", "-cap", "-breed", "-normal", "-standard", "-incarnate", "-ordinary", "-average", "-plumage", "-mask"]
-def find_pokemon(normalized_name: str, original: Pokemon, pokemons: list[ExtraPokemon]) -> ExtraPokemon | None:
+def find_pokemon(normalized_name: str, original: PokemonLegacy, pokemons: list[Pokemon]) -> Pokemon | None:
   name_map = {extra_pokemon.name: extra_pokemon for extra_pokemon in pokemons}
   if normalized_name in name_map:
     return name_map[normalized_name]

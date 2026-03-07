@@ -1,35 +1,29 @@
-query SpeciesQuery {
-  pokemonspecies {
+query MyQuery {
+  pokemonspecies(order_by: {id: asc}) {
     is_mythical
     is_legendary
     is_baby
     id
     name
-    pokemoncolor {
-      id
-      name
-    }
-    pokemonhabitat {
-      id
-      name
-    }
-    pokemonshape {
-      name
-      id
-    }
-    pokemons {
+    gender_rate
+    evolves_from_species_id
+    generation_id
+    pokemon_color_id
+    pokemon_habitat_id
+    pokemon_shape_id
+    pokemons(order_by: {id: asc}) {
       height
       id
       is_default
       name
       order
       pokemonabilities {
-        ability_id
         is_hidden
-        id
         slot
+        ability_id
+        id
       }
-      pokemonforms {
+      pokemonforms(order_by: {id: asc}) {
         name
         order
         id
@@ -42,17 +36,59 @@ query SpeciesQuery {
           sprites
           id
         }
+        pokemonformtypes(order_by: {slot: asc}) {
+          type_id
+          id
+        }
+        pokemonformnames(where: {language_id: {_eq: 9}}) {
+          name
+          pokemon_name
+        }
       }
-    }
-    gender_rate
-    evolves_from_species_id
-    generation {
-      id
-      name
-      types {
-        name
+      pokemontypes(order_by: {slot: asc}) {
+        type_id
         id
       }
+      pokemonstats(order_by: {id: asc}) {
+        id
+        base_stat
+        stat_id
+      }
     }
+    pokemonspeciesnames(where: {language_id: {_eq: 9}}) {
+      id
+      name
+      genus
+    }
+  }
+  pokemoncolor(order_by: {id: asc}) {
+    id
+    name
+  }
+  pokemonhabitat(order_by: {id: asc}) {
+    id
+    name
+  }
+  pokemonshape(order_by: {id: asc}) {
+    id
+    name
+  }
+  ability(order_by: {id: asc}) {
+    id
+    name
+    abilityeffecttexts(where: {language_id: {_eq: 9}}) {
+      effect
+    }
+    abilityflavortexts(where: {language_id: {_eq: 9}}) {
+      flavor_text
+    }
+  }
+  generation(order_by: {id: asc}) {
+    id
+    name
+  }
+  type(order_by: {id: asc}) {
+    name
+    id
   }
 }
