@@ -1,4 +1,4 @@
-import { Stack, type StackProps, Typography } from '@mui/material';
+import { alpha, Stack, type StackProps, Typography } from '@mui/material';
 
 import { CircleQuestionMarkIcon, type LucideProps } from 'lucide-react';
 
@@ -38,6 +38,7 @@ export function TypeBadge({ pokeType, iconOnly, ...props }: TypeBadgeProps) {
       p={1}
       bgcolor={colors.main}
       color={colors.contrast}
+      boxShadow={`1px 3px 4px ${alpha(colors.main, 0.35)}`}
       borderRadius={3}
       {...props}
     >
