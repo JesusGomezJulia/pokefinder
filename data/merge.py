@@ -3,7 +3,7 @@ import json
 from tqdm import tqdm
 
 from transform import COLOR_MAP, HABITAT_MAP
-from contracts import Pokemon, PokemonLegacy, Species
+from data.schema import Pokemon, PokemonLegacy, Species
 
 def postprocess(input_file, extra_file, output_file):
   with open(input_file, 'r') as f:
