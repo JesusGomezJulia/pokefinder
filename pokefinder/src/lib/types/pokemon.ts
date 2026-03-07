@@ -1,28 +1,28 @@
 export enum Type {
-  Normal = 'Normal',
-  Fire = 'Fire',
-  Water = 'Water',
-  Electric = 'Electric',
-  Grass = 'Grass',
-  Ice = 'Ice',
-  Fighting = 'Fighting',
-  Poison = 'Poison',
-  Ground = 'Ground',
-  Flying = 'Flying',
-  Psychic = 'Psychic',
-  Bug = 'Bug',
-  Rock = 'Rock',
-  Ghost = 'Ghost',
-  Dragon = 'Dragon',
-  Dark = 'Dark',
-  Steel = 'Steel',
-  Fairy = 'Fairy',
+  Normal = 'normal',
+  Fire = 'fire',
+  Water = 'water',
+  Electric = 'electric',
+  Grass = 'grass',
+  Ice = 'ice',
+  Fighting = 'fighting',
+  Poison = 'poison',
+  Ground = 'ground',
+  Flying = 'flying',
+  Psychic = 'psychic',
+  Bug = 'bug',
+  Rock = 'rock',
+  Ghost = 'ghost',
+  Dragon = 'dragon',
+  Dark = 'dark',
+  Steel = 'steel',
+  Fairy = 'fairy',
 }
-export type GenderRatio = { M: number; F: number };
+export type GenderRatio = { male: number; female: number; genderless: number };
 export enum Gender {
-  Male = 'M',
-  Female = 'F',
-  Genderless = 'N',
+  Male = 'male',
+  Female = 'female',
+  Genderless = 'genderless',
 }
 export enum Generation {
   Gen1 = 'generation-i',
@@ -43,27 +43,41 @@ export type Stats = {
   spd: number;
   spe: number;
 };
+
+export type Ability = {
+  id: string;
+  name: string;
+  effect: string;
+  description: string;
+};
+
+export type AbilityKey = '0' | '1' | 'H';
 export type Pokemon = {
   id: string;
   num: number;
   name: string;
   types: Type[];
-  genderRatio?: GenderRatio;
-  gender?: Gender;
-  baseStats: Stats;
-  abilities?: Record<'H' | 'S' | '0' | '1' | '2', string>;
-  heightm?: number;
-  weightkg?: number;
-  color?: string;
-  evos?: string[];
-  eggGroups?: string[];
-  tier?: string;
-  isNonstandard?: string;
-  otherFormes?: string[];
-  formeOrder?: string[];
-  canGigantamax?: string;
-  requiredItem?: string;
-  changesFrom?: string;
-  thumbnailUrl?: string;
-  generation?: Generation;
+  generation: Generation;
+  genderRatio: GenderRatio;
+  colors: string[];
+  habitats: string[];
+  abilities: Record<AbilityKey, string>;
+  shape?: string;
+  region?: string;
+  form?: string;
+  spriteUrl?: string;
+  evolvesFrom?: string;
+  evolutions: string[];
+  baseForm?: string;
+  siblingForms: string[];
+  isBase: boolean;
+  isMega: boolean;
+  isGmax: boolean;
+  isTera: boolean;
+  isTotem: boolean;
+  isMythical: boolean;
+  isLegendary: boolean;
+  isUltrabeast: boolean;
+  isParadox: boolean;
+  isBaby: boolean;
 };

@@ -1,7 +1,7 @@
 import type { Pokemon } from '../types';
 
 export async function fetchPokedex() {
-  const res = await fetch('data/pokemon.json');
+  const res = await fetch('data/pokedex.json');
   const data = await res.json();
   return preprocessPokedex(data);
 }

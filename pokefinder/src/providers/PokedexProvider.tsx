@@ -30,7 +30,7 @@ export function PokedexProvider({ children }: PropsWithChildren) {
 
 function enrichPokemon(p: Pokemon): Pokemon {
   return {
-    thumbnailUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.num}.png`,
+    spriteUrl: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.num}.png`,
     ...p,
   };
 }

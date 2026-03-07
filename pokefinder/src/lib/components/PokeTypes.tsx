@@ -25,7 +25,10 @@ type TypeBadgeProps = StackProps & {
   iconOnly?: boolean;
 };
 export function TypeBadge({ pokeType, iconOnly, ...props }: TypeBadgeProps) {
-  const { colors } = TYPE_DATA[pokeType] ?? { colors: { main: '#777', contrast: '#fff' } };
+  const { colors, name } = TYPE_DATA[pokeType] ?? {
+    colors: { main: '#777', contrast: '#fff' },
+    name: pokeType,
+  };
 
   return (
     <Stack
@@ -39,7 +42,7 @@ export function TypeBadge({ pokeType, iconOnly, ...props }: TypeBadgeProps) {
       {...props}
     >
       <TypeIcon pokeType={pokeType} />{' '}
-      {!iconOnly && <Typography variant="body1">{pokeType}</Typography>}
+      {!iconOnly && <Typography variant="body1">{name}</Typography>}
     </Stack>
   );
 }
@@ -48,7 +51,7 @@ type TypeIconProps = LucideProps & {
   pokeType: Type;
 };
 export function TypeIcon({ pokeType, size = 20, ...props }: TypeIconProps) {
-  const typeData = TYPE_DATA[pokeType] ?? {Icon: CircleQuestionMarkIcon};
+  const typeData = TYPE_DATA[pokeType] ?? { Icon: CircleQuestionMarkIcon };
 
   if (!typeData) return <CircleQuestionMarkIcon size={size} {...props} />;
   const { Icon } = typeData;

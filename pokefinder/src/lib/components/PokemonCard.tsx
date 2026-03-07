@@ -4,6 +4,7 @@ import React from 'react';
 
 import type { Pokemon } from '@/lib/types';
 
+import { getDefaultThumbnailUrl } from './constants';
 import { GenBadge } from './GenBadge';
 import { PokeTypes } from './PokeTypes';
 
@@ -24,7 +25,7 @@ function PokemonCardInternal({ pokemon }: PokemonCardProps) {
     >
       <Box
         component="object"
-        data={pokemon.thumbnailUrl}
+        data={pokemon.spriteUrl}
         type="image/jpeg"
         aria-label={pokemon.name}
         height={POKEMON_IMG_SIZE}
@@ -32,7 +33,7 @@ function PokemonCardInternal({ pokemon }: PokemonCardProps) {
       >
         <Box
           component="img"
-          src={pokemon.thumbnailUrl}
+          src={getDefaultThumbnailUrl(pokemon.name)}
           alt={pokemon.name}
           height={POKEMON_IMG_SIZE}
           sx={{ objectFit: 'contain' }}
