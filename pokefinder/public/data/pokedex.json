@@ -379,7 +379,7 @@
       "charizard-gmax"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -423,7 +423,7 @@
       "charizard-gmax"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -1421,7 +1421,7 @@
     "isMega": false,
     "isGmax": false,
     "isTera": false,
-    "isTotem": false,
+    "isTotem": true,
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
@@ -2446,7 +2446,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "starter",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
     "evolvesFrom": "pichu",
     "evolutions": [
       "raichu"
@@ -2708,7 +2708,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega-x",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
     "evolvesFrom": "pikachu",
     "evolutions": [],
     "baseForm": "raichu",
@@ -2718,7 +2718,7 @@
       "raichu-mega-y"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -2749,7 +2749,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega-y",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
     "evolvesFrom": "pikachu",
     "evolutions": [],
     "baseForm": "raichu",
@@ -2759,7 +2759,7 @@
       "raichu-mega-x"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -3307,7 +3307,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
     "evolvesFrom": "clefairy",
     "evolutions": [],
     "baseForm": "clefable",
@@ -8533,7 +8533,7 @@
     "shape": "blob",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
     "evolvesFrom": "staryu",
     "evolutions": [],
     "baseForm": "starmie",
@@ -9414,7 +9414,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "starter",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
     "evolvesFrom": null,
     "evolutions": [
       "vaporeon",
@@ -10500,7 +10500,7 @@
       "mewtwo-mega-y"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -10542,7 +10542,7 @@
       "mewtwo-mega-x"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -10739,7 +10739,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
     "evolvesFrom": "bayleef",
     "evolutions": [],
     "baseForm": "meganium",
@@ -11074,7 +11074,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
     "evolvesFrom": "croconaw",
     "evolutions": [],
     "baseForm": "feraligatr",
@@ -11603,7 +11603,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "pichu-spiky-eared",
@@ -11647,7 +11647,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "cleffa",
@@ -11690,7 +11690,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "igglybuff",
@@ -11734,7 +11734,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "togepi",
@@ -11777,7 +11777,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "togetic",
@@ -16258,7 +16258,7 @@
     "shape": "wings",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "skarmory",
@@ -16700,7 +16700,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "hitmontop",
@@ -16785,7 +16785,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "elekid",
@@ -16827,7 +16827,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "magby",
@@ -16869,7 +16869,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "miltank",
@@ -19615,7 +19615,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "nosepass",
@@ -22146,7 +22146,7 @@
   {
     "id": "castform",
     "num": 351,
-    "name": "",
+    "name": "Castform",
     "types": [
       "normal"
     ],
@@ -22671,7 +22671,7 @@
     "shape": "arms",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/358.png",
     "evolvesFrom": "chingling",
     "evolutions": [],
     "baseForm": "chimecho",
@@ -22797,7 +22797,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "mega-z",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/359.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "absol",
@@ -22806,7 +22806,7 @@
       "absol-mega"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -22856,7 +22856,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "snorunt",
@@ -23952,7 +23952,7 @@
   {
     "id": "kyogre",
     "num": 382,
-    "name": "",
+    "name": "Kyogre",
     "types": [
       "water"
     ],
@@ -24034,7 +24034,7 @@
   {
     "id": "groudon",
     "num": 383,
-    "name": "",
+    "name": "Groudon",
     "types": [
       "ground"
     ],
@@ -24911,7 +24911,7 @@
     "shape": "wings",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png",
     "evolvesFrom": "staravia",
     "evolutions": [],
     "baseForm": "staraptor",
@@ -25249,7 +25249,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "roserade",
@@ -25772,7 +25772,7 @@
     "shape": "bug-wings",
     "region": null,
     "form": "sandy",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/414.png",
     "evolvesFrom": "burmy-plant",
     "evolutions": [],
     "baseForm": "mothim-plant",
@@ -25814,7 +25814,7 @@
     "shape": "bug-wings",
     "region": null,
     "form": "trash",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/414.png",
     "evolvesFrom": "burmy-plant",
     "evolutions": [],
     "baseForm": "mothim-plant",
@@ -26754,7 +26754,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "stunky",
@@ -26959,7 +26959,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "mime-jr",
@@ -27001,7 +27001,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "happiny",
@@ -27042,7 +27042,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "chatot",
@@ -27307,7 +27307,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega-z",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png",
     "evolvesFrom": "gabite",
     "evolutions": [],
     "baseForm": "garchomp",
@@ -27316,7 +27316,7 @@
       "garchomp-mega"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -27365,7 +27365,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "riolu",
@@ -27406,7 +27406,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "lucario",
@@ -27512,7 +27512,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega-z",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
     "evolvesFrom": "riolu",
     "evolutions": [],
     "baseForm": "lucario",
@@ -27521,7 +27521,7 @@
       "lucario-mega"
     ],
     "isBase": false,
-    "isMega": false,
+    "isMega": true,
     "isGmax": false,
     "isTera": false,
     "isTotem": false,
@@ -27930,7 +27930,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "snover",
@@ -28823,7 +28823,7 @@
     "shape": "arms",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/478.png",
     "evolvesFrom": "snorunt",
     "evolutions": [],
     "baseForm": "froslass",
@@ -28844,7 +28844,7 @@
   {
     "id": "rotom",
     "num": 479,
-    "name": "",
+    "name": "Rotom",
     "types": [
       "electric",
       "ghost"
@@ -29441,7 +29441,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/485.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "heatran",
@@ -29746,7 +29746,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/491.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "darkrai",
@@ -31205,7 +31205,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png",
     "evolvesFrom": "pignite",
     "evolutions": [],
     "baseForm": "emboar",
@@ -32489,7 +32489,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png",
     "evolvesFrom": "drilbur",
     "evolutions": [],
     "baseForm": "excadrill",
@@ -33180,7 +33180,7 @@
     "shape": "armor",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/545.png",
     "evolvesFrom": "whirlipede",
     "evolutions": [],
     "baseForm": "scolipede",
@@ -34139,7 +34139,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/560.png",
     "evolvesFrom": "scraggy",
     "evolutions": [],
     "baseForm": "scrafty",
@@ -35917,7 +35917,7 @@
     "shape": "tentacles",
     "region": null,
     "form": "female",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/592.png",
     "evolvesFrom": null,
     "evolutions": [
       "jellicent-male"
@@ -36003,7 +36003,7 @@
     "shape": "tentacles",
     "region": null,
     "form": "female",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/593.png",
     "evolvesFrom": "frillish-male",
     "evolutions": [],
     "baseForm": "jellicent-male",
@@ -36478,7 +36478,7 @@
     "shape": "fish",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/604.png",
     "evolvesFrom": "eelektrik",
     "evolutions": [],
     "baseForm": "eelektross",
@@ -36722,7 +36722,7 @@
     "shape": "arms",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png",
     "evolvesFrom": "lampent",
     "evolutions": [],
     "baseForm": "chandelure",
@@ -37363,7 +37363,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png",
     "evolvesFrom": "golett",
     "evolutions": [],
     "baseForm": "golurk",
@@ -38423,7 +38423,7 @@
   {
     "id": "kyurem",
     "num": 646,
-    "name": "",
+    "name": "Kyurem",
     "types": [
       "dragon",
       "ice"
@@ -39059,7 +39059,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/652.png",
     "evolvesFrom": "quilladin",
     "evolutions": [],
     "baseForm": "chesnaught",
@@ -39218,7 +39218,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/655.png",
     "evolvesFrom": "braixen",
     "evolutions": [],
     "baseForm": "delphox",
@@ -39463,7 +39463,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png",
     "evolvesFrom": "frogadier",
     "evolutions": [],
     "baseForm": "greninja",
@@ -39769,7 +39769,7 @@
     "shape": "armor",
     "region": null,
     "form": "polar",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -39830,7 +39830,7 @@
     "shape": "armor",
     "region": null,
     "form": "tundra",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -39891,7 +39891,7 @@
     "shape": "armor",
     "region": null,
     "form": "continental",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -39952,7 +39952,7 @@
     "shape": "armor",
     "region": null,
     "form": "garden",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40013,7 +40013,7 @@
     "shape": "armor",
     "region": null,
     "form": "elegant",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40074,7 +40074,7 @@
     "shape": "armor",
     "region": null,
     "form": "meadow",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40135,7 +40135,7 @@
     "shape": "armor",
     "region": null,
     "form": "modern",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40196,7 +40196,7 @@
     "shape": "armor",
     "region": null,
     "form": "marine",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40257,7 +40257,7 @@
     "shape": "armor",
     "region": null,
     "form": "archipelago",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40318,7 +40318,7 @@
     "shape": "armor",
     "region": null,
     "form": "high-plains",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40379,7 +40379,7 @@
     "shape": "armor",
     "region": null,
     "form": "sandstorm",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40440,7 +40440,7 @@
     "shape": "armor",
     "region": null,
     "form": "river",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40501,7 +40501,7 @@
     "shape": "armor",
     "region": null,
     "form": "monsoon",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40562,7 +40562,7 @@
     "shape": "armor",
     "region": null,
     "form": "savanna",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40623,7 +40623,7 @@
     "shape": "armor",
     "region": null,
     "form": "sun",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40684,7 +40684,7 @@
     "shape": "armor",
     "region": null,
     "form": "ocean",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40745,7 +40745,7 @@
     "shape": "armor",
     "region": null,
     "form": "jungle",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40806,7 +40806,7 @@
     "shape": "armor",
     "region": null,
     "form": "fancy",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40867,7 +40867,7 @@
     "shape": "armor",
     "region": null,
     "form": "poke-ball",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png",
     "evolvesFrom": null,
     "evolutions": [
       "spewpa-icy-snow"
@@ -40987,7 +40987,7 @@
     "shape": "blob",
     "region": null,
     "form": "polar",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41047,7 +41047,7 @@
     "shape": "blob",
     "region": null,
     "form": "tundra",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41107,7 +41107,7 @@
     "shape": "blob",
     "region": null,
     "form": "continental",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41167,7 +41167,7 @@
     "shape": "blob",
     "region": null,
     "form": "garden",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41227,7 +41227,7 @@
     "shape": "blob",
     "region": null,
     "form": "elegant",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41287,7 +41287,7 @@
     "shape": "blob",
     "region": null,
     "form": "meadow",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41347,7 +41347,7 @@
     "shape": "blob",
     "region": null,
     "form": "modern",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41407,7 +41407,7 @@
     "shape": "blob",
     "region": null,
     "form": "marine",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41467,7 +41467,7 @@
     "shape": "blob",
     "region": null,
     "form": "archipelago",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41527,7 +41527,7 @@
     "shape": "blob",
     "region": null,
     "form": "high-plains",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41587,7 +41587,7 @@
     "shape": "blob",
     "region": null,
     "form": "sandstorm",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41647,7 +41647,7 @@
     "shape": "blob",
     "region": null,
     "form": "river",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41707,7 +41707,7 @@
     "shape": "blob",
     "region": null,
     "form": "monsoon",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41767,7 +41767,7 @@
     "shape": "blob",
     "region": null,
     "form": "savanna",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41827,7 +41827,7 @@
     "shape": "blob",
     "region": null,
     "form": "sun",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41887,7 +41887,7 @@
     "shape": "blob",
     "region": null,
     "form": "ocean",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -41947,7 +41947,7 @@
     "shape": "blob",
     "region": null,
     "form": "jungle",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -42007,7 +42007,7 @@
     "shape": "blob",
     "region": null,
     "form": "fancy",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -42067,7 +42067,7 @@
     "shape": "blob",
     "region": null,
     "form": "poke-ball",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png",
     "evolvesFrom": "scatterbug-icy-snow",
     "evolutions": [
       "vivillon-meadow"
@@ -43414,7 +43414,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "female",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png",
     "evolvesFrom": "litleo",
     "evolutions": [],
     "baseForm": "pyroar-male",
@@ -43453,7 +43453,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png",
     "evolvesFrom": "litleo",
     "evolutions": [],
     "baseForm": "pyroar-male",
@@ -43998,7 +43998,7 @@
     "shape": "arms",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/670.png",
     "evolvesFrom": "flabebe-red",
     "evolutions": [
       "florges-red"
@@ -45011,7 +45011,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png",
     "evolvesFrom": "espurr",
     "evolutions": [],
     "baseForm": "meowstic-male",
@@ -45450,7 +45450,7 @@
     "shape": "blob",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/687.png",
     "evolvesFrom": "inkay",
     "evolutions": [],
     "baseForm": "malamar",
@@ -45572,7 +45572,7 @@
     "shape": "heads",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/689.png",
     "evolvesFrom": "binacle",
     "evolutions": [],
     "baseForm": "barbaracle",
@@ -45694,7 +45694,7 @@
     "shape": "blob",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/691.png",
     "evolvesFrom": "skrelp",
     "evolutions": [],
     "baseForm": "dragalge",
@@ -46130,7 +46130,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/701.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "hawlucha",
@@ -47146,7 +47146,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "active",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/716.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "xerneas-active",
@@ -47244,7 +47244,7 @@
   {
     "id": "zygarde-50",
     "num": 718,
-    "name": "",
+    "name": "Zygarde 50",
     "types": [
       "dragon",
       "ground"
@@ -47439,7 +47439,7 @@
     "shape": "squiggle",
     "region": null,
     "form": "10",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/718.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "zygarde-50",
@@ -47481,7 +47481,7 @@
     "shape": "squiggle",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/718.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "zygarde-50",
@@ -48612,7 +48612,7 @@
     "shape": "armor",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png",
     "evolvesFrom": "crabrawler",
     "evolutions": [],
     "baseForm": "crabominable",
@@ -49477,7 +49477,7 @@
     "shape": "armor",
     "region": null,
     "form": "totem",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/752.png",
     "evolvesFrom": "dewpider",
     "evolutions": [],
     "baseForm": "araquanid",
@@ -49597,7 +49597,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "totem",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/754.png",
     "evolvesFrom": "fomantis",
     "evolutions": [],
     "baseForm": "lurantis",
@@ -49802,7 +49802,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "totem",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/758.png",
     "evolvesFrom": "salandit",
     "evolutions": [],
     "baseForm": "salazzle",
@@ -50240,7 +50240,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/768.png",
     "evolvesFrom": "wimpod",
     "evolutions": [],
     "baseForm": "golisopod",
@@ -50418,7 +50418,7 @@
   {
     "id": "silvally-normal",
     "num": 773,
-    "name": "",
+    "name": "Silvally Normal",
     "types": [
       "normal"
     ],
@@ -50473,7 +50473,7 @@
   {
     "id": "silvally-fighting",
     "num": 773,
-    "name": "",
+    "name": "Silvally Fighting",
     "types": [
       "normal"
     ],
@@ -50528,7 +50528,7 @@
   {
     "id": "silvally-flying",
     "num": 773,
-    "name": "",
+    "name": "Silvally Flying",
     "types": [
       "normal"
     ],
@@ -50583,7 +50583,7 @@
   {
     "id": "silvally-poison",
     "num": 773,
-    "name": "",
+    "name": "Silvally Poison",
     "types": [
       "normal"
     ],
@@ -50638,7 +50638,7 @@
   {
     "id": "silvally-ground",
     "num": 773,
-    "name": "",
+    "name": "Silvally Ground",
     "types": [
       "normal"
     ],
@@ -50693,7 +50693,7 @@
   {
     "id": "silvally-rock",
     "num": 773,
-    "name": "",
+    "name": "Silvally Rock",
     "types": [
       "normal"
     ],
@@ -50748,7 +50748,7 @@
   {
     "id": "silvally-bug",
     "num": 773,
-    "name": "",
+    "name": "Silvally Bug",
     "types": [
       "normal"
     ],
@@ -50803,7 +50803,7 @@
   {
     "id": "silvally-ghost",
     "num": 773,
-    "name": "",
+    "name": "Silvally Ghost",
     "types": [
       "normal"
     ],
@@ -50858,7 +50858,7 @@
   {
     "id": "silvally-steel",
     "num": 773,
-    "name": "",
+    "name": "Silvally Steel",
     "types": [
       "normal"
     ],
@@ -50913,7 +50913,7 @@
   {
     "id": "silvally-fire",
     "num": 773,
-    "name": "",
+    "name": "Silvally Fire",
     "types": [
       "normal"
     ],
@@ -50968,7 +50968,7 @@
   {
     "id": "silvally-water",
     "num": 773,
-    "name": "",
+    "name": "Silvally Water",
     "types": [
       "normal"
     ],
@@ -51023,7 +51023,7 @@
   {
     "id": "silvally-grass",
     "num": 773,
-    "name": "",
+    "name": "Silvally Grass",
     "types": [
       "normal"
     ],
@@ -51078,7 +51078,7 @@
   {
     "id": "silvally-electric",
     "num": 773,
-    "name": "",
+    "name": "Silvally Electric",
     "types": [
       "normal"
     ],
@@ -51133,7 +51133,7 @@
   {
     "id": "silvally-psychic",
     "num": 773,
-    "name": "",
+    "name": "Silvally Psychic",
     "types": [
       "normal"
     ],
@@ -51188,7 +51188,7 @@
   {
     "id": "silvally-ice",
     "num": 773,
-    "name": "",
+    "name": "Silvally Ice",
     "types": [
       "normal"
     ],
@@ -51243,7 +51243,7 @@
   {
     "id": "silvally-dragon",
     "num": 773,
-    "name": "",
+    "name": "Silvally Dragon",
     "types": [
       "normal"
     ],
@@ -51298,7 +51298,7 @@
   {
     "id": "silvally-dark",
     "num": 773,
-    "name": "",
+    "name": "Silvally Dark",
     "types": [
       "normal"
     ],
@@ -51353,7 +51353,7 @@
   {
     "id": "silvally-fairy",
     "num": 773,
-    "name": "",
+    "name": "Silvally Fairy",
     "types": [
       "normal"
     ],
@@ -52274,7 +52274,7 @@
     "shape": "upright",
     "region": null,
     "form": "totem",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/777.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "togedemaru",
@@ -52411,7 +52411,7 @@
     "isMega": false,
     "isGmax": false,
     "isTera": false,
-    "isTotem": false,
+    "isTotem": true,
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
@@ -52453,7 +52453,7 @@
     "isMega": false,
     "isGmax": false,
     "isTera": false,
-    "isTotem": false,
+    "isTotem": true,
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
@@ -52562,7 +52562,7 @@
     "shape": "squiggle",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/780.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "drampa",
@@ -53130,7 +53130,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53168,7 +53168,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53206,7 +53206,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53243,7 +53243,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53281,7 +53281,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53319,7 +53319,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53357,7 +53357,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53632,7 +53632,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/801.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "magearna",
@@ -53672,7 +53672,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/801.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "magearna",
@@ -53765,7 +53765,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53803,7 +53803,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53841,7 +53841,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53879,7 +53879,7 @@
     "isTotem": false,
     "isMythical": false,
     "isLegendary": false,
-    "isUltrabeast": false,
+    "isUltrabeast": true,
     "isParadox": false,
     "isBaby": false
   },
@@ -53941,7 +53941,7 @@
     "shape": "humanoid",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/807.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "zeraora",
@@ -55975,7 +55975,7 @@
     "shape": "wings",
     "region": null,
     "form": "gulping",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/845.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "cramorant",
@@ -56016,7 +56016,7 @@
     "shape": "wings",
     "region": null,
     "form": "gorging",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/845.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "cramorant",
@@ -56153,7 +56153,7 @@
     "isLegendary": false,
     "isUltrabeast": false,
     "isParadox": false,
-    "isBaby": false
+    "isBaby": true
   },
   {
     "id": "toxtricity-amped",
@@ -56599,7 +56599,7 @@
     "shape": "ball",
     "region": null,
     "form": "antique",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/854.png",
     "evolvesFrom": null,
     "evolutions": [
       "polteageist-phony"
@@ -56681,7 +56681,7 @@
     "shape": "ball",
     "region": null,
     "form": "antique",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/855.png",
     "evolvesFrom": "sinistea-phony",
     "evolutions": [],
     "baseForm": "polteageist-phony",
@@ -63893,7 +63893,7 @@
     "shape": "heads",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/870.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "falinks",
@@ -68125,7 +68125,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/952.png",
     "evolvesFrom": "capsakid",
     "evolutions": [],
     "baseForm": "scovillain",
@@ -68922,7 +68922,7 @@
     "shape": "ball",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/970.png",
     "evolvesFrom": "glimmet",
     "evolutions": [],
     "baseForm": "glimmora",
@@ -69371,7 +69371,7 @@
     "shape": "fish",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/978.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "tatsugiri-curly",
@@ -69413,7 +69413,7 @@
     "shape": "fish",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/978.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "tatsugiri-curly",
@@ -69455,7 +69455,7 @@
     "shape": "fish",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/978.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "tatsugiri-curly",
@@ -69754,7 +69754,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -69792,7 +69792,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -69830,7 +69830,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -69868,7 +69868,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -69906,7 +69906,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -69944,7 +69944,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -69982,7 +69982,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -70020,7 +70020,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -70058,7 +70058,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -70096,7 +70096,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -70134,7 +70134,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -70172,7 +70172,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -70318,7 +70318,7 @@
     "shape": "upright",
     "region": null,
     "form": "mega",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/998.png",
     "evolvesFrom": "arctibax",
     "evolutions": [],
     "baseForm": "baxcalibur",
@@ -70643,7 +70643,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -70681,13 +70681,13 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "koraidon-apex-build",
     "num": 1007,
-    "name": "",
+    "name": "Koraidon Apex Build",
     "types": [
       "fighting",
       "dragon"
@@ -70724,13 +70724,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "koraidon-limited-build",
     "num": 1007,
-    "name": "",
+    "name": "Koraidon Limited Build",
     "types": [
       "fighting",
       "dragon"
@@ -70749,7 +70749,7 @@
     "shape": "upright",
     "region": null,
     "form": "limited-build",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1007.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "koraidon-apex-build",
@@ -70767,13 +70767,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "koraidon-sprinting-build",
     "num": 1007,
-    "name": "",
+    "name": "Koraidon Sprinting Build",
     "types": [
       "fighting",
       "dragon"
@@ -70792,7 +70792,7 @@
     "shape": "upright",
     "region": null,
     "form": "sprinting-build",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1007.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "koraidon-apex-build",
@@ -70810,13 +70810,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "koraidon-swimming-build",
     "num": 1007,
-    "name": "",
+    "name": "Koraidon Swimming Build",
     "types": [
       "fighting",
       "dragon"
@@ -70835,7 +70835,7 @@
     "shape": "upright",
     "region": null,
     "form": "swimming-build",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1007.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "koraidon-apex-build",
@@ -70853,13 +70853,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "koraidon-gliding-build",
     "num": 1007,
-    "name": "",
+    "name": "Koraidon Gliding Build",
     "types": [
       "fighting",
       "dragon"
@@ -70878,7 +70878,7 @@
     "shape": "upright",
     "region": null,
     "form": "gliding-build",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1007.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "koraidon-apex-build",
@@ -70896,13 +70896,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "miraidon-ultimate-mode",
     "num": 1008,
-    "name": "",
+    "name": "Miraidon Ultimate Mode",
     "types": [
       "electric",
       "dragon"
@@ -70939,13 +70939,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "miraidon-low-power-mode",
     "num": 1008,
-    "name": "",
+    "name": "Miraidon Low Power Mode",
     "types": [
       "electric",
       "dragon"
@@ -70964,7 +70964,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "low-power-mode",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1008.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "miraidon-ultimate-mode",
@@ -70982,13 +70982,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "miraidon-drive-mode",
     "num": 1008,
-    "name": "",
+    "name": "Miraidon Drive Mode",
     "types": [
       "electric",
       "dragon"
@@ -71007,7 +71007,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "drive-mode",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1008.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "miraidon-ultimate-mode",
@@ -71025,13 +71025,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "miraidon-aquatic-mode",
     "num": 1008,
-    "name": "",
+    "name": "Miraidon Aquatic Mode",
     "types": [
       "electric",
       "dragon"
@@ -71050,7 +71050,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "aquatic-mode",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1008.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "miraidon-ultimate-mode",
@@ -71068,13 +71068,13 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
     "id": "miraidon-glide-mode",
     "num": 1008,
-    "name": "",
+    "name": "Miraidon Glide Mode",
     "types": [
       "electric",
       "dragon"
@@ -71093,7 +71093,7 @@
     "shape": "quadruped",
     "region": null,
     "form": "glide-mode",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1008.png",
     "evolvesFrom": null,
     "evolutions": [],
     "baseForm": "miraidon-ultimate-mode",
@@ -71111,7 +71111,7 @@
     "isMythical": false,
     "isLegendary": true,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -71149,7 +71149,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -71187,7 +71187,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -71298,7 +71298,7 @@
     "shape": "ball",
     "region": null,
     "form": "artisan",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1012.png",
     "evolvesFrom": null,
     "evolutions": [
       "sinistcha-unremarkable"
@@ -71382,7 +71382,7 @@
     "shape": "ball",
     "region": null,
     "form": "masterpiece",
-    "spriteUrl": null,
+    "spriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1013.png",
     "evolvesFrom": "poltchageist-counterfeit",
     "evolutions": [],
     "baseForm": "sinistcha-unremarkable",
@@ -71799,7 +71799,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -71837,7 +71837,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -71875,7 +71875,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {
@@ -71913,7 +71913,7 @@
     "isMythical": false,
     "isLegendary": false,
     "isUltrabeast": false,
-    "isParadox": false,
+    "isParadox": true,
     "isBaby": false
   },
   {

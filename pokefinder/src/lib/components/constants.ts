@@ -1,23 +1,24 @@
 import { type LucideIcon } from 'lucide-react';
 
-import BugIcon from '@/icons/bug.svg?react';
-import DarkIcon from '@/icons/dark.svg?react';
-import DragonIcon from '@/icons/dragon.svg?react';
-import ElectricIcon from '@/icons/electric.svg?react';
-import FairyIcon from '@/icons/fairy.svg?react';
-import FightingIcon from '@/icons/fighting.svg?react';
-import FireIcon from '@/icons/fire.svg?react';
-import FlyingIcon from '@/icons/flying.svg?react';
-import GhostIcon from '@/icons/ghost.svg?react';
-import GrassIcon from '@/icons/grass.svg?react';
-import GroundIcon from '@/icons/ground.svg?react';
-import IceIcon from '@/icons/ice.svg?react';
-import NormalIcon from '@/icons/normal.svg?react';
-import PoisonIcon from '@/icons/poison.svg?react';
-import PsychicIcon from '@/icons/psychic.svg?react';
-import RockIcon from '@/icons/rock.svg?react';
-import SteelIcon from '@/icons/steel.svg?react';
-import WaterIcon from '@/icons/water.svg?react';
+import MegaIconSVG from '@/icons/mega.svg?react';
+import BugIcon from '@/icons/types/bug.svg?react';
+import DarkIcon from '@/icons/types/dark.svg?react';
+import DragonIcon from '@/icons/types/dragon.svg?react';
+import ElectricIcon from '@/icons/types/electric.svg?react';
+import FairyIcon from '@/icons/types/fairy.svg?react';
+import FightingIcon from '@/icons/types/fighting.svg?react';
+import FireIcon from '@/icons/types/fire.svg?react';
+import FlyingIcon from '@/icons/types/flying.svg?react';
+import GhostIcon from '@/icons/types/ghost.svg?react';
+import GrassIcon from '@/icons/types/grass.svg?react';
+import GroundIcon from '@/icons/types/ground.svg?react';
+import IceIcon from '@/icons/types/ice.svg?react';
+import NormalIcon from '@/icons/types/normal.svg?react';
+import PoisonIcon from '@/icons/types/poison.svg?react';
+import PsychicIcon from '@/icons/types/psychic.svg?react';
+import RockIcon from '@/icons/types/rock.svg?react';
+import SteelIcon from '@/icons/types/steel.svg?react';
+import WaterIcon from '@/icons/types/water.svg?react';
 
 import { Generation, Type } from '../types';
 import { svgToLucide } from '../utils/icons';
@@ -148,3 +149,5 @@ export const DEFAULT_THUMBNAIL_URL = 'https://placehold.co/256x256/333/DDD.jpg';
 export function getDefaultThumbnailUrl(text: string) {
   return `https://placehold.co/256x256/333/DDD.jpg?text=${encodeURIComponent(text)}`;
 }
+
+export const MegaIcon = svgToLucide(MegaIconSVG, 'MegaIcon');

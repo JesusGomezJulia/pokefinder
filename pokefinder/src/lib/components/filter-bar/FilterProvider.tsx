@@ -12,6 +12,15 @@ export function FilterProvider({ children }: React.PropsWithChildren) {
   const [excludedTypes, setExcludedTypes] = React.useState<(Type | null)[]>([]);
   const [excludedGens, setExcludedGens] = React.useState<Generation[]>([]);
   const [name, setName] = React.useState<string>('');
+  const [isMega, setIsMega] = React.useState<boolean | null>(null);
+  const [isGmax, setIsGmax] = React.useState<boolean | null>(null);
+  const [isTera, setIsTera] = React.useState<boolean | null>(null);
+  const [isTotem, setIsTotem] = React.useState<boolean | null>(false);
+  const [isMythical, setIsMythical] = React.useState<boolean | null>(null);
+  const [isLegendary, setIsLegendary] = React.useState<boolean | null>(null);
+  const [isUltrabeast, setIsUltrabeast] = React.useState<boolean | null>(null);
+  const [isParadox, setIsParadox] = React.useState<boolean | null>(null);
+  const [isBaby, setIsBaby] = React.useState<boolean | null>(null);
 
   return (
     <FilterContext.Provider
@@ -28,6 +37,24 @@ export function FilterProvider({ children }: React.PropsWithChildren) {
         setExcludedGens,
         name,
         setName,
+        isMega,
+        setIsMega,
+        isGmax,
+        setIsGmax,
+        isTera,
+        setIsTera,
+        isTotem,
+        setIsTotem,
+        isMythical,
+        setIsMythical,
+        isLegendary,
+        setIsLegendary,
+        isUltrabeast,
+        setIsUltrabeast,
+        isParadox,
+        setIsParadox,
+        isBaby,
+        setIsBaby,
       }}
     >
       {children}

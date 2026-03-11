@@ -17,6 +17,24 @@ type TFilterContext = {
   setExcludedGens: Setter<Generation[]>;
   name: string;
   setName: Setter<string>;
+  isMega: boolean | null;
+  setIsMega: Setter<boolean | null>;
+  isGmax: boolean | null;
+  setIsGmax: Setter<boolean | null>;
+  isTera: boolean | null;
+  setIsTera: Setter<boolean | null>;
+  isTotem: boolean | null;
+  setIsTotem: Setter<boolean | null>;
+  isMythical: boolean | null;
+  setIsMythical: Setter<boolean | null>;
+  isLegendary: boolean | null;
+  setIsLegendary: Setter<boolean | null>;
+  isUltrabeast: boolean | null;
+  setIsUltrabeast: Setter<boolean | null>;
+  isParadox: boolean | null;
+  setIsParadox: Setter<boolean | null>;
+  isBaby: boolean | null;
+  setIsBaby: Setter<boolean | null>;
 };
 export const FilterContext = React.createContext<TFilterContext | null>(null);
 

@@ -12,8 +12,23 @@ const TYPES_AND_NULL = [...TYPES, null];
 
 export function FilteredPokemonList() {
   const { pokedex } = usePokedex();
-  const { type1, type2, excludedTypes, excludedGens, ignoreTypeOrder, name } =
-    useFilters();
+  const {
+    type1,
+    type2,
+    excludedTypes,
+    excludedGens,
+    ignoreTypeOrder,
+    name,
+    isMega,
+    isGmax,
+    isTera,
+    isTotem,
+    isMythical,
+    isLegendary,
+    isUltrabeast,
+    isParadox,
+    isBaby,
+  } = useFilters();
   const filtered = useMemo(() => {
     const excludedGensSet = new Set(excludedGens);
 
@@ -30,6 +45,18 @@ export function FilteredPokemonList() {
     const normalizedName = normalizeString(name);
 
     return pokedex.filter((p) => {
+      /* eslint-disable prettier/prettier */
+      if (isMega !== null && p.isMega !== isMega) return false;
+      if (isGmax !== null && p.isGmax !== isGmax) return false;
+      if (isTera !== null && p.isTera !== isTera) return false;
+      if (isTotem !== null && p.isTotem !== isTotem) return false;
+      if (isMythical !== null && p.isMythical !== isMythical) return false;
+      if (isLegendary !== null && p.isLegendary !== isLegendary) return false;
+      if (isUltrabeast !== null && p.isUltrabeast !== isUltrabeast) return false;
+      if (isParadox !== null && p.isParadox !== isParadox) return false;
+      if (isBaby !== null && p.isBaby !== isBaby) return false;
+      /* eslint-enable prettier/prettier */
+
       const firstType = p.types[0] ?? null;
       const secondType = p.types[1] ?? null;
 
@@ -59,6 +86,15 @@ export function FilteredPokemonList() {
     excludedTypes,
     name,
     pokedex,
+    isMega,
+    isGmax,
+    isTera,
+    isTotem,
+    isMythical,
+    isLegendary,
+    isUltrabeast,
+    isParadox,
+    isBaby,
     ignoreTypeOrder,
   ]);
   return <PokemonList pokemons={filtered} />;

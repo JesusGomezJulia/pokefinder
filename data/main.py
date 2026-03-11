@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 from contracts import AbilityKey, PokemonContract
 from transform import map_gender_ratio
-from schema import Ability, PokeAPIQueryData, PokemonAbility, Species
+from schema import Ability, PokeAPIQueryData, Pokemon, PokemonAbility, PokemonForm, Species
 
 REGIONS = { "galar", "paldea", "alola", "hisui" }
 
@@ -13,7 +13,12 @@ def main(input_file: str):
   with open(input_file, 'r', encoding='utf-8') as f:
     data = json.load(f)["data"]
     pokedex = PokeAPIQueryData.model_validate(data)
-  
+
+  with open("in/categories.json", 'r', encoding='utf-8') as f:
+    categories = json.load(f)
+    ultrabeast_set = set(categories["ultrabeast"])
+    paradox_set = set(categories["paradox"])
+
   species = pokedex.pokemonspecies
   species_map = { s.id: s for s in species }
   type_map = { t.id: t for t in pokedex.type }
@@ -39,6 +44,9 @@ def main(input_file: str):
     prevo_id = get_species_id(prevo) if prevo else None
     evo_ids = [get_species_id(s) for s in evos]
 
+    is_ultrabeast = s.name in ultrabeast_set
+    is_paradox = s.name in paradox_set
+
     for p in s.pokemons:
       types = [type_map[t.type_id].name for t in p.pokemontypes]
       abilities = build_ability_dict(p.pokemonabilities, ability_map)
@@ -52,8 +60,10 @@ def main(input_file: str):
           f.pokemonformnames[0].pokemon_name 
             if f.pokemonformnames 
             else species_name
-        )
-        main_sprite = f.pokemonformsprites[0].sprites.front_default
+        ) or id_to_name(f.name)
+
+        main_sprite = get_sprite_or_default(s, p, f)
+
         siblings = all_forms.copy()
         siblings.remove(f.name)
 
@@ -76,15 +86,15 @@ def main(input_file: str):
           baseForm = species_id,
           siblingForms = siblings,
           isBase = f.name == species_id,
-          isMega = f.form_name == "mega",
-          isGmax = f.form_name == "gmax",
-          isTera = f.form_name == "terastal",
-          isTotem = f.form_name == "totem",
+          isMega = "mega" in f.form_name,
+          isGmax = "gmax" in f.form_name,
+          isTera =  "tera" in f.form_name,
+          isTotem = "totem" in f.form_name,
           isMythical = s.is_mythical,
           isLegendary = s.is_legendary,
-          isUltrabeast = False,
-          isParadox = False,
-          isBaby = False
+          isUltrabeast = is_ultrabeast,
+          isParadox = is_paradox,
+          isBaby = s.is_baby,
         )
         result.append(new_pokemon)
 
@@ -112,6 +122,26 @@ def build_ability_dict(abilities: list[PokemonAbility], data_map: dict[int, Abil
     if ability_data:
       result[cast(AbilityKey, key)] = ability_data.name
   return result
+
+def id_to_name(id:str):
+  return id.replace("-", " ").title()
+
+def get_sprite_or_default(species: Species, pokemon: Pokemon, form: PokemonForm):
+  main_sprite = form.pokemonformsprites[0].sprites.front_default
+  if main_sprite:
+    return main_sprite
+  for f_other in pokemon.pokemonforms:
+    main_sprite = f_other.pokemonformsprites[0].sprites.front_default
+    if main_sprite:
+      print(f"  Found sprite in sibling form {f_other.name}")
+      return main_sprite
+  for p_other in species.pokemons:
+    for f_other in p_other.pokemonforms:
+      main_sprite = f_other.pokemonformsprites[0].sprites.front_default
+      if main_sprite:
+        print(f"  Found sprite in sibling pokemon {p_other.name} form {f_other.name}")
+        return main_sprite
+  return None
 
 if __name__ == "__main__":
   main("in/full.json")
