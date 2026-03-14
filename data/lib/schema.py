@@ -183,6 +183,26 @@ class PokeAPIQueryData(BaseModel):
 
   model_config = ConfigDict(extra="ignore")
 
+class CategoryData(BaseModel):
+  ultrabeast: list[str]
+  paradox: list[str]
+
+  model_config = ConfigDict(extra="ignore")
+
+Color = tuple[int, int, int]
+class NamedColor(BaseModel):
+  name: str
+  rgb: Color
+class SpriteColorData(BaseModel):
+  histogram: list[ColorHistogramItem]
+class ColorHistogramItem(BaseModel):
+  color: str
+  weight: float
+
+class ColorData(BaseModel):
+  colors: list[NamedColor]
+  urls: dict[str, SpriteColorData]
+
 class PokemonLegacy(BaseModel):
   num: int
   name: str

@@ -1,147 +1,68 @@
+import argparse
+import asyncio
 import json
-from typing import cast
+import os
+import pathlib
+from typing import Literal
 
-from tqdm import tqdm
+from lib.images.colors import COLORS
+from lib.images.distance import ciede2000_distance
+from lib.images.process import default_visualizer, get_histograms_from_urls
+from lib.transform.pokemon import enrich_colors, process_pokemon
+from lib.schema import CategoryData, ColorData, ColorHistogramItem, PokeAPIQueryData, SpriteColorData
 
-from contracts import AbilityKey, PokemonContract
-from transform import map_gender_ratio
-from schema import Ability, PokeAPIQueryData, Pokemon, PokemonAbility, PokemonForm, Species
+ColorCalcMode = Literal['none', 'cache', 'fetch']
+COLOR_CALC_CHOICES: list[ColorCalcMode] = ['none', 'cache', 'fetch']
 
-REGIONS = { "galar", "paldea", "alola", "hisui" }
-
-def main(input_file: str):
+color_file = pathlib.Path('meta/colors.json')
+async def main(input_file: str, *, commit_to="out/pokedex.json", calc_colors: ColorCalcMode = 'none'):
   with open(input_file, 'r', encoding='utf-8') as f:
     data = json.load(f)["data"]
     pokedex = PokeAPIQueryData.model_validate(data)
 
   with open("in/categories.json", 'r', encoding='utf-8') as f:
-    categories = json.load(f)
-    ultrabeast_set = set(categories["ultrabeast"])
-    paradox_set = set(categories["paradox"])
+    data = json.load(f)
+    categories = CategoryData.model_validate(data)
 
-  species = pokedex.pokemonspecies
-  species_map = { s.id: s for s in species }
-  type_map = { t.id: t for t in pokedex.type }
-  generation_map = { g.id: g for g in pokedex.generation }
-  habitat_map = { h.id: h for h in pokedex.pokemonhabitat }
-  color_map = { c.id: c for c in pokedex.pokemoncolor }
-  shape_map = { s.id: s for s in pokedex.pokemonshape }
+  result = process_pokemon(pokedex, categories)
+  if calc_colors != 'none':
+    refetch = calc_colors == 'fetch'
+    urls = [p.spriteUrl for p in result if p.spriteUrl]
+    hist_data = await get_histograms_from_urls(urls, refetch=refetch, visualizer=default_visualizer, distance_func=ciede2000_distance)
+    color_file.parent.mkdir(exist_ok = True)
+    with open(color_file, 'w') as f:
+      data = ColorData(
+        colors=COLORS,
+        urls={url: SpriteColorData(histogram=[
+          ColorHistogramItem(color=color.name, weight=weight) for color, weight in data
+        ]) for url, data in hist_data.items()}
+      )
+      raw_data = data.model_dump()
+      json.dump(raw_data, f, indent=2)
 
-  abilities = pokedex.ability
-  ability_map = { a.id: a for a in abilities }
-
-  result: list[PokemonContract] = []
-  for s in tqdm(species):
-    species_name = s.pokemonspeciesnames[0].name
-    species_id = get_species_id(s)
-    habitat = habitat_map.get(s.pokemon_habitat_id or -1)
-    habitats = [habitat.name] if habitat else []
-
-    all_forms = [f.name for p in s.pokemons for f in p.pokemonforms]
-
-    prevo = species_map.get(s.evolves_from_species_id or -1)
-    evos = [other for other in species if other.evolves_from_species_id == s.id]
-    prevo_id = get_species_id(prevo) if prevo else None
-    evo_ids = [get_species_id(s) for s in evos]
-
-    is_ultrabeast = s.name in ultrabeast_set
-    is_paradox = s.name in paradox_set
-
-    for p in s.pokemons:
-      types = [type_map[t.type_id].name for t in p.pokemontypes]
-      abilities = build_ability_dict(p.pokemonabilities, ability_map)
-      generation = generation_map.get(s.generation_id)
-      gen_name = generation.name if generation else "unknown"
-      shape = shape_map.get(s.pokemon_shape_id or -1)
-      shape_name = shape.name if shape else None
-
-      for f in p.pokemonforms:
-        name = (
-          f.pokemonformnames[0].pokemon_name 
-            if f.pokemonformnames 
-            else species_name
-        ) or id_to_name(f.name)
-
-        main_sprite = get_sprite_or_default(s, p, f)
-
-        siblings = all_forms.copy()
-        siblings.remove(f.name)
-
-        new_pokemon = PokemonContract(
-          num = s.id,
-          id = f.name,
-          name = name,
-          types = types,
-          region = f.form_name if f.form_name in REGIONS else None,
-          form = f.form_name,
-          generation = gen_name,
-          genderRatio = map_gender_ratio(s.gender_rate),
-          colors = [],
-          shape = shape_name,
-          abilities = abilities,
-          habitats = habitats,
-          spriteUrl  =  main_sprite,
-          evolvesFrom = prevo_id,
-          evolutions = evo_ids,
-          baseForm = species_id,
-          siblingForms = siblings,
-          isBase = f.name == species_id,
-          isMega = "mega" in f.form_name,
-          isGmax = "gmax" in f.form_name,
-          isTera =  "tera" in f.form_name,
-          isTotem = "totem" in f.form_name,
-          isMythical = s.is_mythical,
-          isLegendary = s.is_legendary,
-          isUltrabeast = is_ultrabeast,
-          isParadox = is_paradox,
-          isBaby = s.is_baby,
-        )
-        result.append(new_pokemon)
+  if color_file.exists():
+    with open(color_file, 'r') as f:
+      data = json.load(f)
+      colors = ColorData.model_validate(data)
+    enrich_colors(result, colors)
 
   result_json = [pokemon.model_dump() for pokemon in result]
   
-  with open("out/pokedex.json", "w") as f:
+  commit_dir = pathlib.Path(os.path.dirname(commit_to))
+  commit_dir.mkdir(parents = True, exist_ok = True)
+  with open(commit_to, "w") as f:
     json.dump(result_json, f, indent=2)
 
-def get_species_id(species: Species):
-  for p in species.pokemons:
-    if not p.is_default:
-      continue
-    for f in p.pokemonforms:
-      if not p.is_default:
-        continue
-      return f.name
-    return p.name
-  return species.name
-
-def build_ability_dict(abilities: list[PokemonAbility], data_map: dict[int, Ability]):
-  result: dict[AbilityKey, str] = {}
-  for ability in abilities:
-    key = "H" if ability.is_hidden else f"{ability.slot - 1}"
-    ability_data = data_map.get(ability.ability_id)
-    if ability_data:
-      result[cast(AbilityKey, key)] = ability_data.name
-  return result
-
-def id_to_name(id:str):
-  return id.replace("-", " ").title()
-
-def get_sprite_or_default(species: Species, pokemon: Pokemon, form: PokemonForm):
-  main_sprite = form.pokemonformsprites[0].sprites.front_default
-  if main_sprite:
-    return main_sprite
-  for f_other in pokemon.pokemonforms:
-    main_sprite = f_other.pokemonformsprites[0].sprites.front_default
-    if main_sprite:
-      print(f"  Found sprite in sibling form {f_other.name}")
-      return main_sprite
-  for p_other in species.pokemons:
-    for f_other in p_other.pokemonforms:
-      main_sprite = f_other.pokemonformsprites[0].sprites.front_default
-      if main_sprite:
-        print(f"  Found sprite in sibling pokemon {p_other.name} form {f_other.name}")
-        return main_sprite
-  return None
-
 if __name__ == "__main__":
-  main("in/full.json")
+  parser = argparse.ArgumentParser()
+  parser.add_argument("-i", "--in", help="The input json file containing the pokemon data", default="in/full.json", dest="in_path")
+  parser.add_argument("-o", "--out", help="The output json file to write the results to", default="out/pokedex.json", dest="out_path")
+  parser.add_argument("--commit", action="store_true", help="Equivalent to --out pointing to the webapp's data file", dest="auto_commit")
+  parser.add_argument("-c", "--colors", "--calc-colors", choices=COLOR_CALC_CHOICES, help="Recalculate the colors for each pokemon, 'cache' will use locally stored images (which you must fetch at least once), 'fetch' will redownload all sprite data", default="none", dest="calc_colors")
+
+  result = parser.parse_args()
+  if result.auto_commit:
+    result.out_path = "../pokefinder/public/data/pokedex.json"
+
+  coroutine = main(result.in_path, commit_to=result.out_path, calc_colors=result.calc_colors)
+  asyncio.run(coroutine)

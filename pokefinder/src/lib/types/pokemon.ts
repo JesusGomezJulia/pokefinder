@@ -68,6 +68,7 @@ export type Pokemon = {
   spriteUrl?: string;
   evolvesFrom?: string;
   evolutions: string[];
+  stage: number;
   baseForm?: string;
   siblingForms: string[];
   isBase: boolean;

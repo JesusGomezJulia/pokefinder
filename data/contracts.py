@@ -31,6 +31,7 @@ class PokemonContract(BaseModel):
   spriteUrl: str | None
   evolvesFrom: str | None
   evolutions: list[str] = []
+  stage: int
   baseForm: str | None
   siblingForms: list[str] = []
   isBase: bool
